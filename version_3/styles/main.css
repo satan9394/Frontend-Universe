@@ -1,0 +1,504 @@
+/* Frontend Universe - 主样式文件 */
+
+/* CSS变量定义 - 深空蓝主题配色 */
+:root {
+  /* 主色调 */
+  --primary-dark: #0F172A;      /* 深空蓝 */
+  --primary-blue: #38BDF8;      /* 科技蓝 */
+  --primary-purple: #A855F7;    /* 紫能量 */
+  --accent-yellow: #FACC15;     /* 高亮交互节点 */
+  
+  /* 渐变色 */
+  --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, #1E293B 50%, #334155 100%);
+  --gradient-tech: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
+  --gradient-accent: linear-gradient(90deg, var(--accent-yellow), #F59E0B);
+  
+  /* 文字颜色 */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #64748B;
+  
+  /* 背景色 */
+  --bg-primary: var(--primary-dark);
+  --bg-secondary: #1E293B;
+  --bg-tertiary: #334155;
+  --bg-glass: rgba(15, 23, 42, 0.8);
+  
+  /* 边框和阴影 */
+  --border-primary: rgba(56, 189, 248, 0.3);
+  --border-secondary: rgba(168, 85, 247, 0.3);
+  --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.3);
+  --shadow-purple: 0 0 20px rgba(168, 85, 247, 0.3);
+  
+  /* 字体 */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Roboto Mono', 'Courier New', monospace;
+  
+  /* 动画时长 */
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.8s;
+  --duration-very-slow: 1.2s;
+  
+  /* 性能优化变量 */
+  --animation-duration: 0.3s;
+  --transition-duration: 0.2s;
+  --animation-play-state: running;
+  --particle-count: 100;
+  --animation-complexity: high;
+  
+  /* 响应式变量 */
+  --container-padding: 2rem;
+  --layer-gap: 2rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-small: 0.875rem;
+}
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--gradient-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* 主容器 */
+#universe-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 粒子背景 */
+#particle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 头部样式 */
+.universe-header {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  z-index: 10;
+}
+
+.logo-container {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: var(--gradient-tech);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: var(--shadow-glow);
+  animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+.logo-universe {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  opacity: 0.9;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+/* 主内容区域 */
+.universe-main {
+  position: relative;
+  padding: 2rem;
+  z-index: 5;
+}
+
+/* 技术栈层级容器 */
+.tech-layers-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* 技术层样式 */
+.tech-layer {
+  position: relative;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all var(--duration-normal) ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.tech-layer:hover {
+  border-color: var(--border-secondary);
+  box-shadow: var(--shadow-purple);
+  transform: translateY(-5px);
+}
+
+/* 层级标题 */
+.layer-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.layer-title {
+  font-size: 2rem;
+  font-weight: 600;
+  background: var(--gradient-tech);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.layer-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  opacity: 0.8;
+}
+
+/* 层级内容 */
+.layer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* 技术项目 */
+.tech-item {
+  position: relative;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--duration-normal) ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
+  transition: left var(--duration-slow) ease;
+}
+
+.tech-item:hover::before {
+  left: 100%;
+}
+
+.tech-item:hover {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-3px);
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.tech-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  opacity: 0.9;
+}
+
+/* 控制面板 */
+.control-panel {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.control-btn {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+.control-btn:hover {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* 数据流容器 */
+.data-flow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#data-flow-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* 动画关键帧 */
+@keyframes logoGlow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8));
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .tech-layers-container {
+    max-width: 1000px;
+  }
+  
+  .layer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .universe-header {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .logo-text,
+  .logo-universe {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .universe-main {
+    padding: 1rem;
+  }
+  
+  .tech-layer {
+    padding: 1.5rem;
+  }
+  
+  .layer-title {
+    font-size: 1.5rem;
+  }
+  
+  .layer-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .control-panel {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .control-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text,
+  .logo-universe {
+    font-size: 2rem;
+  }
+  
+  .tech-layer {
+    padding: 1rem;
+  }
+  
+  .tech-item {
+    padding: 1rem;
+  }
+}
+
+/* 性能优化样式 */
+.performance-optimized {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+.reduced-motion {
+  --animation-duration: 0.1s;
+  --transition-duration: 0.05s;
+}
+
+.low-performance {
+  --particle-count: 20;
+  --animation-complexity: low;
+}
+
+/* 懒加载样式 */
+.lazy-loading {
+  opacity: 0;
+  transition: opacity var(--transition-duration) ease;
+}
+
+.lazy-loading.loaded {
+  opacity: 1;
+}
+
+/* 虚拟滚动容器 */
+.virtual-scroll-container {
+  overflow-y: auto;
+  position: relative;
+}
+
+.virtual-scroll-item {
+  position: absolute;
+  width: 100%;
+  transition: transform var(--transition-duration) ease;
+}
+
+/* 断点特定样式 */
+[data-breakpoint="mobile"] {
+  --container-padding: 1rem;
+  --layer-gap: 1rem;
+  --font-size-base: 0.875rem;
+}
+
+[data-breakpoint="tablet"] {
+  --container-padding: 1.5rem;
+  --layer-gap: 1.5rem;
+  --font-size-base: 1rem;
+}
+
+[data-breakpoint="desktop"] {
+  --container-padding: 2rem;
+  --layer-gap: 2rem;
+  --font-size-base: 1rem;
+}
+
+/* 内存优化 */
+.memory-optimized * {
+  pointer-events: none;
+}
+
+.memory-optimized .interactive {
+  pointer-events: auto;
+}
+
+/* 动画暂停 */
+* {
+  animation-play-state: var(--animation-play-state);
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: rgba(255, 255, 255, 0.3);
+    --text-secondary: #e0e0e0;
+  }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.1s !important;
+    transition-duration: 0.1s !important;
+  }
+  
+  .particle-system,
+  .data-flow-particles {
+    display: none;
+  }
+}

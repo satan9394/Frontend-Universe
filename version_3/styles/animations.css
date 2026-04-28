@@ -1,0 +1,476 @@
+/* Frontend Universe - 动画样式文件 */
+
+/* 动画工具类 */
+.animate-fade-in {
+  animation: fadeIn var(--duration-normal) ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--duration-normal) ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft var(--duration-normal) ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight var(--duration-normal) ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--duration-normal) ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* 层级动画 */
+.tech-layer.animate-layer {
+  animation: layerReveal var(--duration-slow) ease-out forwards;
+}
+
+.tech-layer.animate-layer:nth-child(1) { animation-delay: 0.1s; }
+.tech-layer.animate-layer:nth-child(2) { animation-delay: 0.2s; }
+.tech-layer.animate-layer:nth-child(3) { animation-delay: 0.3s; }
+.tech-layer.animate-layer:nth-child(4) { animation-delay: 0.4s; }
+.tech-layer.animate-layer:nth-child(5) { animation-delay: 0.5s; }
+.tech-layer.animate-layer:nth-child(6) { animation-delay: 0.6s; }
+.tech-layer.animate-layer:nth-child(7) { animation-delay: 0.7s; }
+.tech-layer.animate-layer:nth-child(8) { animation-delay: 0.8s; }
+.tech-layer.animate-layer:nth-child(9) { animation-delay: 0.9s; }
+.tech-layer.animate-layer:nth-child(10) { animation-delay: 1.0s; }
+.tech-layer.animate-layer:nth-child(11) { animation-delay: 1.1s; }
+
+/* 技术项目动画 */
+.tech-item.animate-tech {
+  animation: techItemReveal var(--duration-normal) ease-out forwards;
+}
+
+.tech-item.animate-tech:nth-child(1) { animation-delay: 0.1s; }
+.tech-item.animate-tech:nth-child(2) { animation-delay: 0.2s; }
+.tech-item.animate-tech:nth-child(3) { animation-delay: 0.3s; }
+.tech-item.animate-tech:nth-child(4) { animation-delay: 0.4s; }
+
+/* 粒子动画 */
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particle.animate-particle {
+  animation: particleFloat 4s linear infinite;
+}
+
+.particle.type-1 {
+  background: var(--primary-blue);
+  box-shadow: 0 0 6px var(--primary-blue);
+}
+
+.particle.type-2 {
+  background: var(--primary-purple);
+  box-shadow: 0 0 6px var(--primary-purple);
+}
+
+.particle.type-3 {
+  background: var(--accent-yellow);
+  box-shadow: 0 0 6px var(--accent-yellow);
+}
+
+/* 数据流动画 */
+.data-flow-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+  opacity: 0;
+  animation: dataFlow 3s ease-in-out infinite;
+}
+
+.data-flow-pulse {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary-blue);
+  animation: dataPulse 2s ease-in-out infinite;
+}
+
+/* 代码生成动画 */
+.code-generation {
+  position: relative;
+  overflow: hidden;
+}
+
+.code-generation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.3), transparent);
+  animation: codeGenerate 2s ease-in-out infinite;
+}
+
+/* 构建打包动画 */
+.build-animation {
+  position: relative;
+}
+
+.build-animation .tech-icon {
+  animation: buildPulse 1.5s ease-in-out infinite;
+}
+
+.build-animation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: buildRipple 2s ease-out infinite;
+}
+
+/* 网络请求动画 */
+.network-animation {
+  position: relative;
+}
+
+.network-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--primary-blue);
+  border-radius: 12px;
+  opacity: 0;
+  animation: networkPulse 2s ease-in-out infinite;
+}
+
+/* 性能优化动画 */
+.performance-meter {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgba(56, 189, 248, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.performance-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-yellow));
+  border-radius: 2px;
+  width: 0%;
+  animation: performanceIncrease 3s ease-out forwards;
+}
+
+/* 3D变换动画 */
+.transform-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.rotate-y {
+  animation: rotateY 10s linear infinite;
+}
+
+.rotate-x {
+  animation: rotateX 8s linear infinite;
+}
+
+/* 主题切换动画 */
+.theme-transition {
+  transition: all var(--duration-slow) ease;
+}
+
+/* 动画关键帧定义 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+  }
+}
+
+@keyframes layerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes techItemReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes dataFlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes dataPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+}
+
+@keyframes codeGenerate {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes buildPulse {
+  0%, 100% {
+    transform: scale(1);
+    color: var(--primary-blue);
+  }
+  50% {
+    transform: scale(1.1);
+    color: var(--accent-yellow);
+  }
+}
+
+@keyframes buildRipple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+@keyframes networkPulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes performanceIncrease {
+  0% { width: 0%; }
+  100% { width: 85%; }
+}
+
+@keyframes rotateY {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+@keyframes rotateX {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(360deg); }
+}
+
+/* 交互动画 */
+.tech-item:active {
+  transform: translateY(-3px) scale(0.98);
+}
+
+.control-btn:active {
+  transform: translateY(-2px) scale(0.95);
+}
+
+/* 加载动画 */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(56, 189, 248, 0.3);
+  border-top: 3px solid var(--primary-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 文字打字机效果 */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--primary-blue);
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-blue); }
+}
+
+/* 响应式动画调整 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-layer.animate-layer {
+    animation-duration: 0.6s;
+  }
+  
+  .tech-item.animate-tech {
+    animation-duration: 0.4s;
+  }
+  
+  .particle.animate-particle {
+    animation-duration: 6s;
+  }
+}

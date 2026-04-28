@@ -1,0 +1,608 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.universe-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+}
+
+/* 星空背景 */
+.starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 4s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* 标题区域 */
+.title-section {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00d4ff, #0099cc, #6600ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 0 0 30px rgba(0, 212, 255, 0.5); }
+    100% { text-shadow: 0 0 50px rgba(0, 212, 255, 0.8), 0 0 70px rgba(102, 0, 255, 0.3); }
+}
+
+/* 技术层级容器 */
+.tech-layers {
+    position: relative;
+    z-index: 5;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.layer {
+    margin-bottom: 100px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.layer.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.layer-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* HTML层 - 信息骨架塔 */
+.skeleton-tower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    perspective: 1000px;
+}
+
+.tag-element {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.2), rgba(255, 107, 107, 0.1));
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    color: #ff6b6b;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: all 0.5s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.tag-element:nth-child(odd) {
+    animation-delay: -1.5s;
+}
+
+.tag-element:hover {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+    50% { transform: translateY(-10px) rotateZ(2deg); }
+}
+
+/* CSS层 - 色彩波纹 */
+.color-waves {
+    position: relative;
+    height: 200px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    animation: waveMove 4s linear infinite;
+}
+
+.wave-1 {
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.3), transparent);
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    animation-delay: -1.3s;
+}
+
+.wave-3 {
+    background: linear-gradient(90deg, transparent, rgba(102, 0, 255, 0.3), transparent);
+    animation-delay: -2.6s;
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.layout-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.flexbox-demo, .grid-demo, .animation-demo {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.flexbox-demo {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.grid-demo {
+    background: linear-gradient(45deg, #00d4ff, #33ddff);
+    animation: pulse 2s ease-in-out infinite;
+    animation-delay: -0.7s;
+}
+
+.animation-demo {
+    background: linear-gradient(45deg, #6600ff, #8833ff);
+    animation: pulse 2s ease-in-out infinite;
+    animation-delay: -1.4s;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); }
+}
+
+/* JavaScript层 - 能量流 */
+.energy-flows {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.energy-node {
+    position: relative;
+    padding: 15px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    color: #ffd700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: energyPulse 2s ease-in-out infinite;
+}
+
+.energy-node:nth-child(2n) {
+    animation-delay: -0.5s;
+}
+
+.energy-node:nth-child(3n) {
+    animation-delay: -1s;
+}
+
+.energy-node:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+}
+
+@keyframes energyPulse {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+        transform: scale(1.05);
+    }
+}
+
+#energyCanvas {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 框架宇宙 */
+.framework-planets {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.planet {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    animation: planetRotate 10s linear infinite;
+}
+
+.react-planet {
+    background: linear-gradient(45deg, #61dafb, #21a9c7);
+    color: #000;
+    box-shadow: 0 0 30px rgba(97, 218, 251, 0.5);
+}
+
+.vue-planet {
+    background: linear-gradient(45deg, #4fc08d, #42b883);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(79, 192, 141, 0.5);
+    animation-delay: -3.3s;
+}
+
+.angular-planet {
+    background: linear-gradient(45deg, #dd0031, #c3002f);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(221, 0, 49, 0.5);
+    animation-delay: -6.6s;
+}
+
+.orbit {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitRotate 15s linear infinite reverse;
+}
+
+@keyframes planetRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes orbitRotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 工程化系统 */
+.build-system {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.gear {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 8px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    animation: gearRotate 4s linear infinite;
+}
+
+.webpack-gear {
+    border-color: #8dd6f9;
+    color: #8dd6f9;
+    box-shadow: 0 0 20px rgba(141, 214, 249, 0.4);
+}
+
+.vite-gear {
+    border-color: #646cff;
+    color: #646cff;
+    box-shadow: 0 0 20px rgba(100, 108, 255, 0.4);
+    animation-delay: -1.3s;
+}
+
+.babel-gear {
+    border-color: #f9dc3e;
+    color: #f9dc3e;
+    box-shadow: 0 0 20px rgba(249, 220, 62, 0.4);
+    animation-delay: -2.6s;
+}
+
+.gear::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: currentColor;
+    border-radius: 50%;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gear::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: currentColor;
+    border-radius: 50%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes gearRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 性能体验层 */
+.device-showcase {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    height: 200px;
+}
+
+.device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.device:hover {
+    transform: translateY(-10px);
+}
+
+.screen {
+    border-radius: 10px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    margin-bottom: 10px;
+    animation: screenGlow 3s ease-in-out infinite alternate;
+}
+
+.desktop .screen {
+    width: 120px;
+    height: 80px;
+}
+
+.tablet .screen {
+    width: 80px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.mobile .screen {
+    width: 50px;
+    height: 90px;
+    border-radius: 20px;
+}
+
+.device-label {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+@keyframes screenGlow {
+    0% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); }
+    100% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.8); }
+}
+
+.performance-metrics {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.metric {
+    padding: 15px 25px;
+    background: linear-gradient(45deg, rgba(0, 255, 127, 0.2), rgba(0, 255, 127, 0.1));
+    border: 2px solid #00ff7f;
+    border-radius: 25px;
+    color: #00ff7f;
+    font-weight: bold;
+    text-align: center;
+    animation: metricPulse 2s ease-in-out infinite;
+}
+
+.metric:nth-child(2) {
+    animation-delay: -0.7s;
+}
+
+.metric:nth-child(3) {
+    animation-delay: -1.4s;
+}
+
+@keyframes metricPulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 255, 127, 0.3);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0, 255, 127, 0.6);
+    }
+}
+
+/* 控制面板 */
+.control-panel {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+}
+
+.control-btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, rgba(0, 212, 255, 0.2), rgba(0, 212, 255, 0.1));
+    border: 2px solid #00d4ff;
+    border-radius: 25px;
+    color: #00d4ff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: linear-gradient(45deg, rgba(0, 212, 255, 0.4), rgba(0, 212, 255, 0.2));
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* 进度指示器 */
+.progress-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    z-index: 100;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #6600ff);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .layer {
+        margin-bottom: 60px;
+        padding: 20px;
+    }
+    
+    .framework-planets {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+    
+    .build-system {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .device-showcase {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    
+    .control-panel {
+        flex-direction: column;
+        width: 200px;
+    }
+}

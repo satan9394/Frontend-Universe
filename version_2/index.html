@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端全景宇宙：从HTML到AI Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="universe-container">
+        <!-- 背景深空 -->
+        <div class="deep-space">
+            <div class="stars-layer"></div>
+            <div class="nebula-layer"></div>
+        </div>
+
+        <!-- 开场标题 -->
+        <div class="intro-section" id="introSection">
+            <h1 class="universe-title">前端全景宇宙</h1>
+            <h2 class="universe-subtitle">From HTML to AI Web</h2>
+            <p class="universe-description">数字世界的入口</p>
+            <div class="start-journey-btn" onclick="startJourney()">开始探索</div>
+        </div>
+
+        <!-- 技术层级宇宙 -->
+        <div class="tech-universe" id="techUniverse">
+            
+            <!-- 1️⃣ 原子层 - 基础语言 -->
+            <div class="tech-layer atomic-layer" id="atomicLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">原子层</h3>
+                    <p class="layer-subtitle">基础语言构建</p>
+                </div>
+                
+                <div class="atomic-particles">
+                    <div class="particle html-particle">
+                        <div class="particle-core">HTML</div>
+                        <div class="particle-orbit"></div>
+                        <div class="particle-glow"></div>
+                    </div>
+                    <div class="particle css-particle">
+                        <div class="particle-core">CSS</div>
+                        <div class="particle-orbit"></div>
+                        <div class="particle-glow"></div>
+                    </div>
+                    <div class="particle js-particle">
+                        <div class="particle-core">JS</div>
+                        <div class="particle-orbit"></div>
+                        <div class="particle-glow"></div>
+                    </div>
+                </div>
+
+                <div class="atomic-fusion">
+                    <div class="fusion-result">
+                        <div class="webpage-skeleton">
+                            <div class="skeleton-header">&lt;header&gt;</div>
+                            <div class="skeleton-nav">&lt;nav&gt;</div>
+                            <div class="skeleton-main">&lt;main&gt;</div>
+                            <div class="skeleton-footer">&lt;footer&gt;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2️⃣ 分子层 - 框架与库 -->
+            <div class="tech-layer molecular-layer" id="molecularLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">分子层</h3>
+                    <p class="layer-subtitle">框架与库生态</p>
+                </div>
+
+                <div class="framework-cores">
+                    <div class="energy-core react-core">
+                        <div class="core-logo">React</div>
+                        <div class="core-components">
+                            <div class="component">JSX</div>
+                            <div class="component">Hooks</div>
+                            <div class="component">Virtual DOM</div>
+                        </div>
+                        <div class="core-satellites">
+                            <div class="satellite">Next.js</div>
+                            <div class="satellite">Gatsby</div>
+                        </div>
+                    </div>
+
+                    <div class="energy-core vue-core">
+                        <div class="core-logo">Vue</div>
+                        <div class="core-components">
+                            <div class="component">Template</div>
+                            <div class="component">Composition</div>
+                            <div class="component">Reactivity</div>
+                        </div>
+                        <div class="core-satellites">
+                            <div class="satellite">Nuxt.js</div>
+                            <div class="satellite">Quasar</div>
+                        </div>
+                    </div>
+
+                    <div class="energy-core angular-core">
+                        <div class="core-logo">Angular</div>
+                        <div class="core-components">
+                            <div class="component">TypeScript</div>
+                            <div class="component">Dependency Injection</div>
+                            <div class="component">RxJS</div>
+                        </div>
+                        <div class="core-satellites">
+                            <div class="satellite">Ionic</div>
+                            <div class="satellite">NativeScript</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="framework-connections">
+                    <canvas id="frameworkCanvas" width="800" height="400"></canvas>
+                </div>
+
+                <div class="alternative-frameworks">
+                    <div class="alt-framework">Svelte</div>
+                    <div class="alt-framework">Solid.js</div>
+                    <div class="alt-framework">Qwik</div>
+                    <div class="alt-framework">Alpine.js</div>
+                </div>
+            </div>
+
+            <!-- 3️⃣ 系统层 - 工程化与构建 -->
+            <div class="tech-layer system-layer" id="systemLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">系统层</h3>
+                    <p class="layer-subtitle">工程化与构建</p>
+                </div>
+
+                <div class="build-pipeline">
+                    <div class="pipeline-stage">
+                        <div class="stage-title">构建工具</div>
+                        <div class="build-tools">
+                            <div class="tool vite-tool">
+                                <div class="tool-gear"></div>
+                                <div class="tool-name">Vite</div>
+                            </div>
+                            <div class="tool webpack-tool">
+                                <div class="tool-gear"></div>
+                                <div class="tool-name">Webpack</div>
+                            </div>
+                            <div class="tool rollup-tool">
+                                <div class="tool-gear"></div>
+                                <div class="tool-name">Rollup</div>
+                            </div>
+                            <div class="tool esbuild-tool">
+                                <div class="tool-gear"></div>
+                                <div class="tool-name">esbuild</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-stage">
+                        <div class="stage-title">代码质量</div>
+                        <div class="quality-tools">
+                            <div class="quality-item">Babel</div>
+                            <div class="quality-item">PostCSS</div>
+                            <div class="quality-item">ESLint</div>
+                            <div class="quality-item">Prettier</div>
+                            <div class="quality-item">TypeScript</div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-stage">
+                        <div class="stage-title">包管理</div>
+                        <div class="package-managers">
+                            <div class="package-manager npm-pm">npm</div>
+                            <div class="package-manager yarn-pm">yarn</div>
+                            <div class="package-manager pnpm-pm">pnpm</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-flow-visualization">
+                    <canvas id="dataFlowCanvas" width="800" height="300"></canvas>
+                </div>
+            </div>
+
+            <!-- 4️⃣ 网络层 - 通信与数据 -->
+            <div class="tech-layer network-layer" id="networkLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">网络层</h3>
+                    <p class="layer-subtitle">通信与数据交换</p>
+                </div>
+
+                <div class="network-topology">
+                    <div class="network-node api-node">
+                        <div class="node-label">REST API</div>
+                        <div class="node-pulse"></div>
+                    </div>
+                    <div class="network-node graphql-node">
+                        <div class="node-label">GraphQL</div>
+                        <div class="node-pulse"></div>
+                    </div>
+                    <div class="network-node websocket-node">
+                        <div class="node-label">WebSocket</div>
+                        <div class="node-pulse"></div>
+                    </div>
+                    <div class="network-node grpc-node">
+                        <div class="node-label">gRPC</div>
+                        <div class="node-pulse"></div>
+                    </div>
+                </div>
+
+                <div class="data-transmission">
+                    <canvas id="networkCanvas" width="800" height="400"></canvas>
+                </div>
+
+                <div class="http-clients">
+                    <div class="client-lib">Axios</div>
+                    <div class="client-lib">Fetch</div>
+                    <div class="client-lib">SWR</div>
+                    <div class="client-lib">React Query</div>
+                </div>
+            </div>
+
+            <!-- 5️⃣ 应用层 - 状态与界面 -->
+            <div class="tech-layer application-layer" id="applicationLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">应用层</h3>
+                    <p class="layer-subtitle">状态管理与UI组件</p>
+                </div>
+
+                <div class="state-management">
+                    <div class="state-center">
+                        <div class="state-hub">State Hub</div>
+                        <div class="state-connections">
+                            <div class="state-lib redux-lib">Redux</div>
+                            <div class="state-lib pinia-lib">Pinia</div>
+                            <div class="state-lib mobx-lib">MobX</div>
+                            <div class="state-lib zustand-lib">Zustand</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-ecosystem">
+                    <div class="ui-category">
+                        <div class="category-title">设计系统</div>
+                        <div class="ui-libraries">
+                            <div class="ui-lib">Ant Design</div>
+                            <div class="ui-lib">Material UI</div>
+                            <div class="ui-lib">Element Plus</div>
+                            <div class="ui-lib">Chakra UI</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-category">
+                        <div class="category-title">无头组件</div>
+                        <div class="ui-libraries">
+                            <div class="ui-lib">Headless UI</div>
+                            <div class="ui-lib">Radix UI</div>
+                            <div class="ui-lib">Ariakit</div>
+                            <div class="ui-lib">Shadcn/ui</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-assembly">
+                    <div class="assembly-demo">
+                        <div class="demo-component header-comp">Header</div>
+                        <div class="demo-component sidebar-comp">Sidebar</div>
+                        <div class="demo-component content-comp">Content</div>
+                        <div class="demo-component footer-comp">Footer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6️⃣ 表现层 - 用户体验与性能 -->
+            <div class="tech-layer presentation-layer" id="presentationLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">表现层</h3>
+                    <p class="layer-subtitle">用户体验与性能优化</p>
+                </div>
+
+                <div class="performance-metrics">
+                    <div class="metric-group">
+                        <div class="metric-title">核心指标</div>
+                        <div class="metrics">
+                            <div class="metric lcp-metric">LCP</div>
+                            <div class="metric fid-metric">FID</div>
+                            <div class="metric cls-metric">CLS</div>
+                            <div class="metric fcp-metric">FCP</div>
+                        </div>
+                    </div>
+
+                    <div class="optimization-techniques">
+                        <div class="technique">Lazy Loading</div>
+                        <div class="technique">Code Splitting</div>
+                        <div class="technique">Tree Shaking</div>
+                        <div class="technique">Service Worker</div>
+                    </div>
+                </div>
+
+                <div class="pwa-showcase">
+                    <div class="pwa-features">
+                        <div class="pwa-feature offline-feature">
+                            <div class="feature-icon">📱</div>
+                            <div class="feature-name">PWA</div>
+                        </div>
+                        <div class="pwa-feature install-feature">
+                            <div class="feature-icon">⬇️</div>
+                            <div class="feature-name">Install</div>
+                        </div>
+                        <div class="pwa-feature push-feature">
+                            <div class="feature-icon">🔔</div>
+                            <div class="feature-name">Push</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animation-engines">
+                    <div class="animation-lib gsap-lib">GSAP</div>
+                    <div class="animation-lib framer-lib">Framer Motion</div>
+                    <div class="animation-lib lottie-lib">Lottie</div>
+                    <div class="animation-lib threejs-lib">Three.js</div>
+                </div>
+            </div>
+
+            <!-- 7️⃣ 前沿层 - 未来前端 -->
+            <div class="tech-layer frontier-layer" id="frontierLayer">
+                <div class="layer-header">
+                    <h3 class="layer-title">前沿层</h3>
+                    <p class="layer-subtitle">未来前端技术</p>
+                </div>
+
+                <div class="future-technologies">
+                    <div class="tech-portal webgpu-portal">
+                        <div class="portal-core">WebGPU</div>
+                        <div class="portal-description">高性能图形计算</div>
+                        <div class="portal-glow"></div>
+                    </div>
+
+                    <div class="tech-portal web3-portal">
+                        <div class="portal-core">Web3</div>
+                        <div class="portal-description">去中心化应用</div>
+                        <div class="portal-glow"></div>
+                        <div class="web3-tools">
+                            <div class="web3-tool">Web3.js</div>
+                            <div class="web3-tool">Ethers.js</div>
+                            <div class="web3-tool">Wagmi</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-portal xr-portal">
+                        <div class="portal-core">XR/AR/VR</div>
+                        <div class="portal-description">沉浸式体验</div>
+                        <div class="portal-glow"></div>
+                        <div class="xr-frameworks">
+                            <div class="xr-framework">A-Frame</div>
+                            <div class="xr-framework">React 360</div>
+                            <div class="xr-framework">WebXR</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-portal ai-portal">
+                        <div class="portal-core">AI前端</div>
+                        <div class="portal-description">智能化开发</div>
+                        <div class="portal-glow"></div>
+                        <div class="ai-tools">
+                            <div class="ai-tool">Vercel v0</div>
+                            <div class="ai-tool">Figma-to-Code</div>
+                            <div class="ai-tool">GitHub Copilot</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimensional-space">
+                    <canvas id="dimensionalCanvas" width="800" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结尾总结 -->
+        <div class="conclusion-section" id="conclusionSection">
+            <div class="universe-overview">
+                <h2 class="conclusion-title">前端宇宙全景</h2>
+                <div class="tech-pillars">
+                    <div class="pillar">结构</div>
+                    <div class="pillar">表现</div>
+                    <div class="pillar">逻辑</div>
+                    <div class="pillar">系统</div>
+                    <div class="pillar">体验</div>
+                    <div class="pillar">智能</div>
+                </div>
+                <p class="final-message">前端的全部</p>
+            </div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <button class="control-btn play-btn" onclick="playAnimation()">▶️ 播放</button>
+            <button class="control-btn pause-btn" onclick="pauseAnimation()">⏸️ 暂停</button>
+            <button class="control-btn reset-btn" onclick="resetAnimation()">🔄 重置</button>
+            <button class="control-btn narration-btn" onclick="toggleNarration()">🎵 旁白</button>
+        </div>
+
+        <!-- 进度指示器 -->
+        <div class="progress-indicator">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">准备探索前端宇宙...</div>
+            <div class="layer-indicators">
+                <div class="indicator" data-layer="atomic">原子</div>
+                <div class="indicator" data-layer="molecular">分子</div>
+                <div class="indicator" data-layer="system">系统</div>
+                <div class="indicator" data-layer="network">网络</div>
+                <div class="indicator" data-layer="application">应用</div>
+                <div class="indicator" data-layer="presentation">表现</div>
+                <div class="indicator" data-layer="frontier">前沿</div>
+            </div>
+        </div>
+
+        <!-- 音频元素 -->
+        <audio id="backgroundMusic" loop>
+            <source src="assets/background-music.mp3" type="audio/mpeg">
+        </audio>
+        
+        <audio id="narrationAudio">
+            <source src="assets/narration.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

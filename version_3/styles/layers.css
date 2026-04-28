@@ -1,0 +1,808 @@
+/* Frontend Universe - 层级专用样式 */
+
+/* 基础层 - Foundation Layer */
+#foundation-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+#foundation-layer .tech-item {
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+#foundation-layer .tech-item:hover {
+  border-color: #22C55E;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+#foundation-layer .tech-icon {
+  color: #22C55E;
+}
+
+/* 样式层 - Styling Layer */
+#styling-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(236, 72, 153, 0.4);
+}
+
+#styling-layer .tech-item {
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+#styling-layer .tech-item:hover {
+  border-color: #EC4899;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+#styling-layer .tech-icon {
+  color: #EC4899;
+}
+
+/* 组件层 - Component Layer */
+#component-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+#component-layer .tech-item {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+#component-layer .tech-item:hover {
+  border-color: #38BDF8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+#component-layer .tech-icon {
+  color: #38BDF8;
+}
+
+/* 状态层 - State Layer */
+#state-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+#state-layer .tech-item {
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+#state-layer .tech-item:hover {
+  border-color: #A855F7;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+#state-layer .tech-icon {
+  color: #A855F7;
+}
+
+/* 网络层 - Network Layer */
+#network-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+#network-layer .tech-item {
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+#network-layer .tech-item:hover {
+  border-color: #0EA5E9;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+}
+
+#network-layer .tech-icon {
+  color: #0EA5E9;
+}
+
+/* 工程层 - Build Layer */
+#build-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+#build-layer .tech-item {
+  border-color: rgba(250, 204, 21, 0.3);
+}
+
+#build-layer .tech-item:hover {
+  border-color: #FACC15;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+#build-layer .tech-icon {
+  color: #FACC15;
+}
+
+/* 代码质量层 - Quality Layer */
+#quality-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+#quality-layer .tech-item {
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+#quality-layer .tech-item:hover {
+  border-color: #22C55E;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+#quality-layer .tech-icon {
+  color: #22C55E;
+}
+
+/* UI层 - UI Layer */
+#ui-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+#ui-layer .tech-item {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+#ui-layer .tech-item:hover {
+  border-color: #8B5CF6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+#ui-layer .tech-icon {
+  color: #8B5CF6;
+}
+
+/* 性能层 - Performance Layer */
+#performance-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+#performance-layer .tech-item {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+#performance-layer .tech-item:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+#performance-layer .tech-icon {
+  color: #F59E0B;
+}
+
+/* 部署层 - Deployment Layer */
+#deployment-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+#deployment-layer .tech-item {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+#deployment-layer .tech-item:hover {
+  border-color: #EF4444;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+#deployment-layer .tech-icon {
+  color: #EF4444;
+}
+
+/* 前沿层 - Frontier Layer */
+#frontier-layer {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 50%, 
+    rgba(51, 65, 85, 0.7) 100%);
+  border-color: rgba(168, 85, 247, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+#frontier-layer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(168, 85, 247, 0.1) 50%, 
+    transparent 70%);
+  animation: frontierGlow 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+#frontier-layer .tech-item {
+  border-color: rgba(168, 85, 247, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+#frontier-layer .tech-item:hover {
+  border-color: #A855F7;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+#frontier-layer .tech-icon {
+  color: #A855F7;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* 层级连接线 */
+.layer-connection {
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, var(--primary-blue), transparent);
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  animation: connectionPulse 2s ease-in-out infinite;
+}
+
+/* 层级编号 */
+.layer-number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  background: var(--gradient-tech);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  z-index: 10;
+}
+
+/* 特殊效果 */
+.tech-layer.active {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.tech-layer.building .tech-item {
+  animation: buildingEffect 1s ease-in-out infinite;
+}
+
+.tech-layer.networking .tech-item {
+  animation: networkingEffect 2s ease-in-out infinite;
+}
+
+.tech-layer.optimizing .performance-meter {
+  display: block;
+}
+
+/* 动画关键帧 */
+@keyframes frontierGlow {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes connectionPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleY(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scaleY(1.2);
+  }
+}
+
+@keyframes buildingEffect {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+  }
+}
+
+@keyframes networkingEffect {
+  0%, 100% {
+    border-color: rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    border-color: rgba(14, 165, 233, 0.8);
+  }
+}
+
+/* 层级间数据流 */
+.data-stream {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--primary-blue), 
+    var(--primary-purple), 
+    transparent);
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  animation: dataStream 4s ease-in-out infinite;
+}
+
+@keyframes dataStream {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* 响应式层级调整 */
+@media (max-width: 768px) {
+  .layer-connection {
+    height: 30px;
+    bottom: -15px;
+  }
+  
+  .layer-number {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+  
+  .tech-layer.active {
+    transform: scale(1.01);
+  }
+}
+
+/* 技术组件相关样式 */
+
+/* 技术项悬停效果 */
+.tech-item-hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.3);
+    z-index: 10;
+}
+
+/* 技术特性标签 */
+.tech-features {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    z-index: 20;
+}
+
+.feature-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    margin: 2px;
+    white-space: nowrap;
+}
+
+/* 技术动画指示器 */
+.tech-animation-indicator {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-item:hover .tech-animation-indicator {
+    opacity: 1;
+    animation: pulse 1.5s infinite;
+}
+
+/* 技术模态框 */
+.tech-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-modal.modal-show {
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    transform: translateY(50px);
+    transition: transform 0.3s ease;
+}
+
+.tech-modal.modal-show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    gap: 15px;
+}
+
+.tech-icon-large {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+.modal-header h2 {
+    flex: 1;
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.tech-description-full {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.tech-features-list h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.tech-features-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-features-list li {
+    background: var(--bg-tertiary);
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+    color: var(--text-secondary);
+}
+
+.tech-animation-demo {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.tech-animation-demo h3 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.animation-preview {
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.play-animation-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.play-animation-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+/* 技术预览提示 */
+.tech-preview {
+    position: fixed;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 300px;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateX(10px);
+    opacity: 0;
+    animation: slideInRight 0.3s ease forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.preview-content h4 {
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+}
+
+.preview-content p {
+    color: var(--text-secondary);
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.preview-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.preview-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    border: 1px solid var(--border-color);
+}
+
+/* 层级连接线 */
+.layer-connection {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, var(--border-color));
+    transform: translateX(-50%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.layer-connection.connection-active {
+    background: linear-gradient(to bottom, transparent, var(--primary-color));
+    opacity: 1;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* 数据流动画 */
+.data-flow-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.data-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: dataFlow 3s infinite linear;
+}
+
+.data-particle:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.data-particle:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes dataFlow {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) translateX(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px) translateX(50px);
+    }
+}
+
+/* 技术项动画状态 */
+.tech-animating {
+    animation: techItemPulse 2s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes techItemPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 20px rgba(var(--primary-rgb), 0);
+    }
+}
+
+/* 层级激活状态 */
+.layer-active {
+    transform: translateZ(10px);
+    box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.3);
+}
+
+.layer-active .layer-title {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* 代码粒子动画 */
+.code-particle {
+    color: var(--accent-color);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 50;
+    animation: codeParticleFloat 3s ease-out forwards;
+}
+
+@keyframes codeParticleFloat {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-100px);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tech-modal .modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .tech-preview {
+        max-width: 250px;
+        font-size: 0.9rem;
+    }
+    
+    .tech-features {
+        position: static;
+        margin-top: 10px;
+        background: var(--bg-tertiary);
+    }
+    
+    .tech-item-hover {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-header {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .tech-icon-large {
+        font-size: 2rem;
+    }
+}

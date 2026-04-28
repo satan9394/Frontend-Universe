@@ -1,0 +1,37 @@
+音频文件说明 / Audio Files Description
+=====================================
+
+此文件夹用于存放项目的音频资源：
+This folder is for storing project audio resources:
+
+1. background-music.mp3 - 背景音乐文件 (Background music file)
+   - 建议使用电子氛围音乐 (Recommended: Electronic ambient music)
+   - 时长：60-90秒 (Duration: 60-90 seconds)
+   - 格式：MP3, 128kbps+ (Format: MP3, 128kbps+)
+
+2. narration.mp3 - 旁白音频文件 (Narration audio file)
+   - 英文旁白脚本内容 (English narration script content)
+   - 时长：约30-40秒 (Duration: About 30-40 seconds)
+   - 格式：MP3, 清晰人声 (Format: MP3, clear voice)
+
+旁白脚本内容 / Narration Script Content:
+"HTML builds the structure.
+CSS shapes the beauty.
+JavaScript brings life.
+Frameworks expand the universe.
+Tools refine the system.
+Networks connect the world.
+And now, AI lights the path to the future web."
+
+注意：由于版权原因，此项目不包含实际音频文件。
+Note: Due to copyright reasons, this project does not include actual audio files.
+
+用户可以：
+Users can:
+1. 添加自己的音频文件 (Add their own audio files)
+2. 使用AI语音生成工具创建旁白 (Use AI voice generation tools to create narration)
+3. 在代码中禁用音频功能 (Disable audio functionality in code)
+
+如需禁用音频，请在script.js中设置：
+To disable audio, set in script.js:
+const ENABLE_AUDIO = false;

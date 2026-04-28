@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端星图：从HTML到未来的Web宇宙</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="universe-container">
+        <!-- 背景星空 -->
+        <div class="starfield"></div>
+        
+        <!-- 主标题 -->
+        <div class="title-section">
+            <h1 class="main-title">前端星图</h1>
+            <h2 class="subtitle">The Frontend Galaxy — From HTML to the Future of the Web</h2>
+        </div>
+
+        <!-- 技术层级展示区域 -->
+        <div class="tech-layers">
+            <!-- HTML层 - 信息骨架塔 -->
+            <div class="layer html-layer" id="htmlLayer">
+                <div class="layer-title">HTML - 结构层</div>
+                <div class="skeleton-tower">
+                    <div class="tag-element">&lt;html&gt;</div>
+                    <div class="tag-element">&lt;head&gt;</div>
+                    <div class="tag-element">&lt;body&gt;</div>
+                    <div class="tag-element">&lt;header&gt;</div>
+                    <div class="tag-element">&lt;nav&gt;</div>
+                    <div class="tag-element">&lt;main&gt;</div>
+                    <div class="tag-element">&lt;section&gt;</div>
+                    <div class="tag-element">&lt;div&gt;</div>
+                    <div class="tag-element">&lt;p&gt;</div>
+                    <div class="tag-element">&lt;footer&gt;</div>
+                </div>
+            </div>
+
+            <!-- CSS层 - 色彩波纹 -->
+            <div class="layer css-layer" id="cssLayer">
+                <div class="layer-title">CSS - 表现层</div>
+                <div class="color-waves">
+                    <div class="wave wave-1"></div>
+                    <div class="wave wave-2"></div>
+                    <div class="wave wave-3"></div>
+                </div>
+                <div class="layout-showcase">
+                    <div class="flexbox-demo">Flexbox</div>
+                    <div class="grid-demo">Grid</div>
+                    <div class="animation-demo">Animation</div>
+                </div>
+            </div>
+
+            <!-- JavaScript层 - 能量流 -->
+            <div class="layer js-layer" id="jsLayer">
+                <div class="layer-title">JavaScript - 逻辑层</div>
+                <div class="energy-flows">
+                    <div class="energy-node" data-keyword="Promise">Promise</div>
+                    <div class="energy-node" data-keyword="async">async</div>
+                    <div class="energy-node" data-keyword="DOM">DOM</div>
+                    <div class="energy-node" data-keyword="Event">Event</div>
+                    <div class="energy-node" data-keyword="API">API</div>
+                </div>
+                <canvas id="energyCanvas" width="800" height="400"></canvas>
+            </div>
+
+            <!-- 框架宇宙 -->
+            <div class="layer framework-layer" id="frameworkLayer">
+                <div class="layer-title">框架宇宙</div>
+                <div class="framework-planets">
+                    <div class="planet react-planet">
+                        <div class="planet-logo">React</div>
+                        <div class="orbit"></div>
+                    </div>
+                    <div class="planet vue-planet">
+                        <div class="planet-logo">Vue</div>
+                        <div class="orbit"></div>
+                    </div>
+                    <div class="planet angular-planet">
+                        <div class="planet-logo">Angular</div>
+                        <div class="orbit"></div>
+                    </div>
+                </div>
+                <div class="component-network"></div>
+            </div>
+
+            <!-- 工程化系统 -->
+            <div class="layer tooling-layer" id="toolingLayer">
+                <div class="layer-title">工程化系统</div>
+                <div class="build-system">
+                    <div class="gear webpack-gear">
+                        <div class="gear-label">Webpack</div>
+                    </div>
+                    <div class="gear vite-gear">
+                        <div class="gear-label">Vite</div>
+                    </div>
+                    <div class="gear babel-gear">
+                        <div class="gear-label">Babel</div>
+                    </div>
+                </div>
+                <div class="data-flow"></div>
+            </div>
+
+            <!-- 性能体验层 -->
+            <div class="layer performance-layer" id="performanceLayer">
+                <div class="layer-title">性能与体验</div>
+                <div class="device-showcase">
+                    <div class="device desktop">
+                        <div class="screen"></div>
+                        <div class="device-label">Desktop</div>
+                    </div>
+                    <div class="device tablet">
+                        <div class="screen"></div>
+                        <div class="device-label">Tablet</div>
+                    </div>
+                    <div class="device mobile">
+                        <div class="screen"></div>
+                        <div class="device-label">Mobile</div>
+                    </div>
+                </div>
+                <div class="performance-metrics">
+                    <div class="metric">PWA</div>
+                    <div class="metric">WebGPU</div>
+                    <div class="metric">Animation</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <button class="control-btn" onclick="startAnimation()">开始演示</button>
+            <button class="control-btn" onclick="pauseAnimation()">暂停</button>
+            <button class="control-btn" onclick="resetAnimation()">重置</button>
+        </div>
+
+        <!-- 进度指示器 -->
+        <div class="progress-indicator">
+            <div class="progress-bar"></div>
+            <div class="progress-text">准备开始...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Universe - 前端全景宇宙</title>
+    <meta name="description" content="多层动态可视化前端技术栈展示 - 从基础到前沿的完整前端生态系统">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/layers.css">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div id="universe-container">
+        <!-- 背景粒子系统 -->
+        <div id="particle-background"></div>
+        
+        <!-- 项目Logo和标题 -->
+        <header class="universe-header">
+            <div class="logo-container">
+                <div class="logo-animation">
+                    <span class="logo-text">Frontend</span>
+                    <span class="logo-universe">Universe</span>
+                </div>
+                <p class="subtitle">前端全景宇宙 - 技术栈可视化演示</p>
+            </div>
+        </header>
+
+        <!-- 主要内容区域 -->
+        <main class="universe-main">
+            <!-- 技术栈层级展示 -->
+            <div class="tech-layers-container">
+                <!-- 基础层 -->
+                <div class="tech-layer" data-layer="1" id="foundation-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">基础层 - Foundation</h2>
+                        <div class="layer-subtitle">HTML5 / CSS3 / JavaScript (ES6+)</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="html5">
+                            <div class="tech-icon">HTML5</div>
+                            <div class="tech-description">语义化结构</div>
+                        </div>
+                        <div class="tech-item" data-tech="css3">
+                            <div class="tech-icon">CSS3</div>
+                            <div class="tech-description">样式表现</div>
+                        </div>
+                        <div class="tech-item" data-tech="javascript">
+                            <div class="tech-icon">JS</div>
+                            <div class="tech-description">交互逻辑</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 样式层 -->
+                <div class="tech-layer" data-layer="2" id="styling-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">样式层 - Styling</h2>
+                        <div class="layer-subtitle">Sass / Less / Tailwind CSS / CSS Modules</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="sass">
+                            <div class="tech-icon">Sass</div>
+                            <div class="tech-description">CSS预处理器</div>
+                        </div>
+                        <div class="tech-item" data-tech="tailwind">
+                            <div class="tech-icon">Tailwind</div>
+                            <div class="tech-description">原子化CSS</div>
+                        </div>
+                        <div class="tech-item" data-tech="css-modules">
+                            <div class="tech-icon">Modules</div>
+                            <div class="tech-description">模块化样式</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 组件层 -->
+                <div class="tech-layer" data-layer="3" id="component-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">组件层 - Components</h2>
+                        <div class="layer-subtitle">React / Vue / Angular / Svelte</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="react">
+                            <div class="tech-icon">React</div>
+                            <div class="tech-description">组件化开发</div>
+                        </div>
+                        <div class="tech-item" data-tech="vue">
+                            <div class="tech-icon">Vue</div>
+                            <div class="tech-description">渐进式框架</div>
+                        </div>
+                        <div class="tech-item" data-tech="angular">
+                            <div class="tech-icon">Angular</div>
+                            <div class="tech-description">企业级框架</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 状态层 -->
+                <div class="tech-layer" data-layer="4" id="state-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">状态层 - State Management</h2>
+                        <div class="layer-subtitle">Redux / Vuex / Pinia / MobX / Zustand</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="redux">
+                            <div class="tech-icon">Redux</div>
+                            <div class="tech-description">可预测状态</div>
+                        </div>
+                        <div class="tech-item" data-tech="pinia">
+                            <div class="tech-icon">Pinia</div>
+                            <div class="tech-description">Vue状态管理</div>
+                        </div>
+                        <div class="tech-item" data-tech="zustand">
+                            <div class="tech-icon">Zustand</div>
+                            <div class="tech-description">轻量状态库</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 网络层 -->
+                <div class="tech-layer" data-layer="5" id="network-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">网络层 - Network</h2>
+                        <div class="layer-subtitle">Axios / Fetch / GraphQL / WebSocket</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="axios">
+                            <div class="tech-icon">Axios</div>
+                            <div class="tech-description">HTTP客户端</div>
+                        </div>
+                        <div class="tech-item" data-tech="graphql">
+                            <div class="tech-icon">GraphQL</div>
+                            <div class="tech-description">查询语言</div>
+                        </div>
+                        <div class="tech-item" data-tech="websocket">
+                            <div class="tech-icon">WebSocket</div>
+                            <div class="tech-description">实时通信</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 工程层 -->
+                <div class="tech-layer" data-layer="6" id="build-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">工程层 - Build Tools</h2>
+                        <div class="layer-subtitle">Webpack / Vite / Rollup / esbuild / Babel</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="webpack">
+                            <div class="tech-icon">Webpack</div>
+                            <div class="tech-description">模块打包器</div>
+                        </div>
+                        <div class="tech-item" data-tech="vite">
+                            <div class="tech-icon">Vite</div>
+                            <div class="tech-description">快速构建工具</div>
+                        </div>
+                        <div class="tech-item" data-tech="esbuild">
+                            <div class="tech-icon">esbuild</div>
+                            <div class="tech-description">极速打包</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 代码质量层 -->
+                <div class="tech-layer" data-layer="7" id="quality-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">代码质量层 - Quality</h2>
+                        <div class="layer-subtitle">ESLint / Prettier / Jest / Cypress</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="eslint">
+                            <div class="tech-icon">ESLint</div>
+                            <div class="tech-description">代码检查</div>
+                        </div>
+                        <div class="tech-item" data-tech="jest">
+                            <div class="tech-icon">Jest</div>
+                            <div class="tech-description">单元测试</div>
+                        </div>
+                        <div class="tech-item" data-tech="cypress">
+                            <div class="tech-icon">Cypress</div>
+                            <div class="tech-description">端到端测试</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI层 -->
+                <div class="tech-layer" data-layer="8" id="ui-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">UI层 - UI Libraries</h2>
+                        <div class="layer-subtitle">Ant Design / Element Plus / Material UI / Shadcn</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="antd">
+                            <div class="tech-icon">Ant Design</div>
+                            <div class="tech-description">企业级UI</div>
+                        </div>
+                        <div class="tech-item" data-tech="mui">
+                            <div class="tech-icon">Material UI</div>
+                            <div class="tech-description">Material设计</div>
+                        </div>
+                        <div class="tech-item" data-tech="shadcn">
+                            <div class="tech-icon">Shadcn</div>
+                            <div class="tech-description">现代组件库</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 性能与体验层 -->
+                <div class="tech-layer" data-layer="9" id="performance-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">性能与体验层 - Performance</h2>
+                        <div class="layer-subtitle">Lazy Loading / PWA / Service Worker / Lighthouse</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="pwa">
+                            <div class="tech-icon">PWA</div>
+                            <div class="tech-description">渐进式应用</div>
+                        </div>
+                        <div class="tech-item" data-tech="lighthouse">
+                            <div class="tech-icon">Lighthouse</div>
+                            <div class="tech-description">性能审计</div>
+                        </div>
+                        <div class="tech-item" data-tech="lazy-loading">
+                            <div class="tech-icon">Lazy Load</div>
+                            <div class="tech-description">懒加载优化</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 安全与部署层 -->
+                <div class="tech-layer" data-layer="10" id="deployment-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">安全与部署层 - Deployment</h2>
+                        <div class="layer-subtitle">HTTPS / JWT / OAuth2 / CI/CD / Vercel / Netlify</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="cicd">
+                            <div class="tech-icon">CI/CD</div>
+                            <div class="tech-description">持续集成</div>
+                        </div>
+                        <div class="tech-item" data-tech="vercel">
+                            <div class="tech-icon">Vercel</div>
+                            <div class="tech-description">边缘部署</div>
+                        </div>
+                        <div class="tech-item" data-tech="jwt">
+                            <div class="tech-icon">JWT</div>
+                            <div class="tech-description">身份认证</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 前沿层 -->
+                <div class="tech-layer" data-layer="11" id="frontier-layer">
+                    <div class="layer-header">
+                        <h2 class="layer-title">前沿层 - Frontier</h2>
+                        <div class="layer-subtitle">WebGPU / WebAssembly / WebXR / Web3.js / AI前端</div>
+                    </div>
+                    <div class="layer-content">
+                        <div class="tech-item" data-tech="webgpu">
+                            <div class="tech-icon">WebGPU</div>
+                            <div class="tech-description">GPU计算</div>
+                        </div>
+                        <div class="tech-item" data-tech="webassembly">
+                            <div class="tech-icon">WASM</div>
+                            <div class="tech-description">高性能运行时</div>
+                        </div>
+                        <div class="tech-item" data-tech="ai-frontend">
+                            <div class="tech-icon">AI Frontend</div>
+                            <div class="tech-description">智能前端</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <button class="control-btn" id="play-animation">▶ 播放动画</button>
+            <button class="control-btn" id="reset-animation">⟲ 重置</button>
+            <button class="control-btn" id="toggle-theme">🌙 切换主题</button>
+        </div>
+
+        <!-- 数据流可视化 -->
+        <div class="data-flow-container">
+            <canvas id="data-flow-canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="scripts/tech-data.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/interactions.js"></script>
+    <script src="scripts/tech-components.js"></script>
+    <script src="scripts/3d-effects.js"></script>
+    <script src="scripts/performance.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
