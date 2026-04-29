@@ -5,3 +5,7 @@ __pycache__/
 .vscode/
 .idea/
 dist/
+version_1.zip
+.env
+.env.local
+*.log
